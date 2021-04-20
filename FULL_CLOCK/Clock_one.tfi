@@ -1,0 +1,13 @@
+
+
+
+// Instantiate the module
+Clock_one instance_name (
+    .clk(clk), 
+    .swch(swch), 
+    .BUT1(BUT1), 
+    .BUT2(BUT2), 
+    .OUTCR(OUTCR)
+    );
+
+

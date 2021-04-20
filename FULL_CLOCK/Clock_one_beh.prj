@@ -1,0 +1,8 @@
+verilog work "UnBounceBB.v"
+verilog work "onbeep.v"
+verilog work "MUXSecPlexer.v"
+verilog work "MUXplexer.v"
+verilog work "Bublik_two.v"
+verilog work "BublikSegment.v"
+verilog work "Clock_one.v"
+verilog work "D:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"

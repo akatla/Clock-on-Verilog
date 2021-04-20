@@ -1,0 +1,785 @@
+Release 14.7 - xst P.20131013 (nt)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.16 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.16 secs
+ 
+--> Reading design: Clock_one.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "Clock_one.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "Clock_one"
+Output Format                      : NGC
+Target Device                      : xc6slx9-3-tqg144
+
+---- Source Options
+Top Module Name                    : Clock_one
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "C:\0_FPGA_2018\NEW_BOARD\FULL_CLOCK\UnBounceBB.v" into library work
+Parsing module <UnBounceBB>.
+Analyzing Verilog file "C:\0_FPGA_2018\NEW_BOARD\FULL_CLOCK\onbeep.v" into library work
+Parsing module <onbeep>.
+Analyzing Verilog file "C:\0_FPGA_2018\NEW_BOARD\FULL_CLOCK\MUXSecPlexer.v" into library work
+Parsing module <SixteenToSixteen>.
+Analyzing Verilog file "C:\0_FPGA_2018\NEW_BOARD\FULL_CLOCK\MUXplexer.v" into library work
+Parsing module <SixteenToFour>.
+Analyzing Verilog file "C:\0_FPGA_2018\NEW_BOARD\FULL_CLOCK\Bublik_two.v" into library work
+Parsing module <Bublik_two>.
+Analyzing Verilog file "C:\0_FPGA_2018\NEW_BOARD\FULL_CLOCK\BublikSegment.v" into library work
+Parsing module <Bublik_segment>.
+Analyzing Verilog file "C:\0_FPGA_2018\NEW_BOARD\FULL_CLOCK\Clock_one.v" into library work
+Parsing module <Clock_one>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <Clock_one>.
+
+Elaborating module <UnBounceBB>.
+
+Elaborating module <onbeep>.
+
+Elaborating module <SixteenToSixteen>.
+
+Elaborating module <SixteenToFour>.
+
+Elaborating module <Bublik_two>.
+
+Elaborating module <Bublik_segment>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <Clock_one>.
+    Related source file is "C:\0_FPGA_2018\NEW_BOARD\FULL_CLOCK\Clock_one.v".
+        MAINCLOCK = 25
+    Found 1-bit register for signal <SETtikTak>.
+    Found 26-bit register for signal <RG>.
+    Found 1-bit register for signal <tikTak>.
+    Found 1-bit register for signal <sec1KHZ>.
+    Found 2-bit register for signal <Reg_dynamics>.
+    Found 4-bit register for signal <Reg_HourJun>.
+    Found 2-bit register for signal <Reg_HourSen>.
+    Found 4-bit register for signal <Reg_minutes>.
+    Found 3-bit register for signal <Reg_minten>.
+    Found 4-bit register for signal <Reg_secundes>.
+    Found 3-bit register for signal <Reg_secten>.
+    Found 4-bit register for signal <Reg_milisecth>.
+    Found 4-bit register for signal <Reg_milisecsec>.
+    Found 4-bit register for signal <Reg_milisecfrst>.
+    Found 4-bit register for signal <Reg_HourTT>.
+    Found 2-bit register for signal <Reg_TT>.
+    Found 4-bit register for signal <Reg_minTT>.
+    Found 3-bit register for signal <Reg_mTT>.
+    Found 1-bit register for signal <ALARM>.
+    Found 4-bit adder for signal <add_milisecth> created at line 98.
+    Found 4-bit adder for signal <add_milisecsec> created at line 99.
+    Found 4-bit adder for signal <add_milisecfrst> created at line 100.
+    Found 26-bit adder for signal <add> created at line 103.
+    Found 2-bit adder for signal <add_dynamics> created at line 104.
+    Found 4-bit adder for signal <add_secundes> created at line 106.
+    Found 3-bit adder for signal <add_secten> created at line 107.
+    Found 4-bit adder for signal <add_minutes> created at line 108.
+    Found 3-bit adder for signal <add_minten> created at line 109.
+    Found 4-bit adder for signal <add_HourJun> created at line 110.
+    Found 2-bit adder for signal <add_HourSen> created at line 111.
+    Found 4-bit adder for signal <add_HourTT> created at line 114.
+    Found 2-bit adder for signal <add_TT> created at line 115.
+    Found 4-bit adder for signal <add_minTT> created at line 117.
+    Found 3-bit adder for signal <add_mTT> created at line 118.
+    Found 13-bit comparator equal for signal <Reg_HourSen[1]_Reg_TT[1]_equal_18_o> created at line 149
+    Found 26-bit comparator greater for signal <RG[25]_PWR_1_o_LessThan_20_o> created at line 161
+    Found 4-bit comparator greater for signal <Reg_HourJun[3]_PWR_1_o_LessThan_26_o> created at line 188
+    Found 2-bit comparator greater for signal <Reg_HourSen[1]_PWR_1_o_LessThan_27_o> created at line 194
+    Found 4-bit comparator greater for signal <Reg_secundes[3]_PWR_1_o_LessThan_43_o> created at line 229
+    Found 3-bit comparator greater for signal <Reg_secten[2]_PWR_1_o_LessThan_44_o> created at line 235
+    Found 4-bit comparator greater for signal <Reg_minutes[3]_PWR_1_o_LessThan_45_o> created at line 241
+    Found 3-bit comparator greater for signal <Reg_minten[2]_PWR_1_o_LessThan_46_o> created at line 247
+    Found 4-bit comparator greater for signal <Reg_milisecth[3]_PWR_1_o_LessThan_88_o> created at line 286
+    Found 4-bit comparator greater for signal <Reg_milisecsec[3]_PWR_1_o_LessThan_89_o> created at line 292
+    Found 4-bit comparator lessequal for signal <Reg_milisecfrst[3]_PWR_1_o_LessThan_90_o> created at line 298
+    Found 4-bit comparator greater for signal <Reg_HourTT[3]_PWR_1_o_LessThan_106_o> created at line 319
+    Found 2-bit comparator lessequal for signal <Reg_TT[1]_PWR_1_o_LessThan_107_o> created at line 325
+    Found 4-bit comparator greater for signal <Reg_minTT[3]_PWR_1_o_LessThan_119_o> created at line 339
+    Found 3-bit comparator lessequal for signal <Reg_mTT[2]_PWR_1_o_LessThan_120_o> created at line 346
+    Summary:
+	inferred  15 Adder/Subtractor(s).
+	inferred  77 D-type flip-flop(s).
+	inferred  15 Comparator(s).
+	inferred  17 Multiplexer(s).
+Unit <Clock_one> synthesized.
+
+Synthesizing Unit <UnBounceBB>.
+    Related source file is "C:\0_FPGA_2018\NEW_BOARD\FULL_CLOCK\UnBounceBB.v".
+        STAGE = 10
+    Found 1-bit register for signal <deb>.
+    Found 10-bit register for signal <chain>.
+    Summary:
+	inferred  11 D-type flip-flop(s).
+Unit <UnBounceBB> synthesized.
+
+Synthesizing Unit <onbeep>.
+    Related source file is "C:\0_FPGA_2018\NEW_BOARD\FULL_CLOCK\onbeep.v".
+    Found 1-bit register for signal <clk_1k>.
+    Found 32-bit register for signal <cnt_khz>.
+    Found 32-bit adder for signal <addcnt> created at line 33.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  33 D-type flip-flop(s).
+Unit <onbeep> synthesized.
+
+Synthesizing Unit <SixteenToSixteen>.
+    Related source file is "C:\0_FPGA_2018\NEW_BOARD\FULL_CLOCK\MUXSecPlexer.v".
+    Found 16-bit 4-to-1 multiplexer for signal <outD> created at line 60.
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <SixteenToSixteen> synthesized.
+
+Synthesizing Unit <SixteenToFour>.
+    Related source file is "C:\0_FPGA_2018\NEW_BOARD\FULL_CLOCK\MUXplexer.v".
+    Found 4-bit 4-to-1 multiplexer for signal <outData> created at line 34.
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <SixteenToFour> synthesized.
+
+Synthesizing Unit <Bublik_two>.
+    Related source file is "C:\0_FPGA_2018\NEW_BOARD\FULL_CLOCK\Bublik_two.v".
+    Found 4x4-bit Read Only RAM for signal <DNM>
+    Summary:
+	inferred   1 RAM(s).
+Unit <Bublik_two> synthesized.
+
+Synthesizing Unit <Bublik_segment>.
+    Related source file is "C:\0_FPGA_2018\NEW_BOARD\FULL_CLOCK\BublikSegment.v".
+    Found 16x7-bit Read Only RAM for signal <DNMSEG>
+    Summary:
+	inferred   1 RAM(s).
+Unit <Bublik_segment> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 2
+ 16x7-bit single-port Read Only RAM                    : 1
+ 4x4-bit single-port Read Only RAM                     : 1
+# Adders/Subtractors                                   : 16
+ 2-bit adder                                           : 3
+ 26-bit adder                                          : 1
+ 3-bit adder                                           : 3
+ 32-bit adder                                          : 1
+ 4-bit adder                                           : 8
+# Registers                                            : 29
+ 1-bit register                                        : 9
+ 10-bit register                                       : 4
+ 2-bit register                                        : 3
+ 26-bit register                                       : 1
+ 3-bit register                                        : 3
+ 32-bit register                                       : 1
+ 4-bit register                                        : 8
+# Comparators                                          : 15
+ 13-bit comparator equal                               : 1
+ 2-bit comparator greater                              : 1
+ 2-bit comparator lessequal                            : 1
+ 26-bit comparator greater                             : 1
+ 3-bit comparator greater                              : 2
+ 3-bit comparator lessequal                            : 1
+ 4-bit comparator greater                              : 7
+ 4-bit comparator lessequal                            : 1
+# Multiplexers                                         : 19
+ 16-bit 4-to-1 multiplexer                             : 1
+ 2-bit 2-to-1 multiplexer                              : 13
+ 3-bit 2-to-1 multiplexer                              : 1
+ 4-bit 2-to-1 multiplexer                              : 3
+ 4-bit 4-to-1 multiplexer                              : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <Bublik_segment>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_DNMSEG> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 7-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <inrg>          |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <DNMSEG>        |          |
+    -----------------------------------------------------------------------
+Unit <Bublik_segment> synthesized (advanced).
+
+Synthesizing (advanced) Unit <Bublik_two>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_DNM> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 4-word x 4-bit                      |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <inrg>          |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <DNM>           |          |
+    -----------------------------------------------------------------------
+Unit <Bublik_two> synthesized (advanced).
+
+Synthesizing (advanced) Unit <Clock_one>.
+The following registers are absorbed into counter <RG>: 1 register on signal <RG>.
+The following registers are absorbed into counter <Reg_dynamics>: 1 register on signal <Reg_dynamics>.
+The following registers are absorbed into counter <Reg_minutes>: 1 register on signal <Reg_minutes>.
+The following registers are absorbed into counter <Reg_minten>: 1 register on signal <Reg_minten>.
+The following registers are absorbed into counter <Reg_secundes>: 1 register on signal <Reg_secundes>.
+The following registers are absorbed into counter <Reg_secten>: 1 register on signal <Reg_secten>.
+The following registers are absorbed into counter <Reg_milisecth>: 1 register on signal <Reg_milisecth>.
+The following registers are absorbed into counter <Reg_milisecsec>: 1 register on signal <Reg_milisecsec>.
+The following registers are absorbed into counter <Reg_milisecfrst>: 1 register on signal <Reg_milisecfrst>.
+The following registers are absorbed into counter <Reg_HourTT>: 1 register on signal <Reg_HourTT>.
+The following registers are absorbed into counter <Reg_TT>: 1 register on signal <Reg_TT>.
+The following registers are absorbed into counter <Reg_minTT>: 1 register on signal <Reg_minTT>.
+The following registers are absorbed into counter <Reg_mTT>: 1 register on signal <Reg_mTT>.
+Unit <Clock_one> synthesized (advanced).
+
+Synthesizing (advanced) Unit <onbeep>.
+The following registers are absorbed into counter <cnt_khz>: 1 register on signal <cnt_khz>.
+Unit <onbeep> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 2
+ 16x7-bit single-port distributed Read Only RAM        : 1
+ 4x4-bit single-port distributed Read Only RAM         : 1
+# Adders/Subtractors                                   : 2
+ 2-bit adder                                           : 1
+ 4-bit adder                                           : 1
+# Counters                                             : 14
+ 2-bit up counter                                      : 2
+ 26-bit up counter                                     : 1
+ 3-bit up counter                                      : 3
+ 32-bit up counter                                     : 1
+ 4-bit up counter                                      : 7
+# Registers                                            : 55
+ Flip-Flops                                            : 55
+# Comparators                                          : 15
+ 13-bit comparator equal                               : 1
+ 2-bit comparator greater                              : 1
+ 2-bit comparator lessequal                            : 1
+ 26-bit comparator greater                             : 1
+ 3-bit comparator greater                              : 2
+ 3-bit comparator lessequal                            : 1
+ 4-bit comparator greater                              : 7
+ 4-bit comparator lessequal                            : 1
+# Multiplexers                                         : 17
+ 16-bit 4-to-1 multiplexer                             : 1
+ 2-bit 2-to-1 multiplexer                              : 13
+ 4-bit 2-to-1 multiplexer                              : 2
+ 4-bit 4-to-1 multiplexer                              : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <Clock_one> ...
+
+Optimizing unit <UnBounceBB> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block Clock_one, actual ratio is 4.
+FlipFlop sec1KHZ has been replicated 1 time(s)
+
+Final Macro Processing ...
+
+Processing Unit <Clock_one> :
+	Found 2-bit shift register for signal <ubnc_d/chain_1>.
+	Found 2-bit shift register for signal <ubnc_c/chain_1>.
+	Found 2-bit shift register for signal <ubnc_b/chain_1>.
+	Found 2-bit shift register for signal <ubnc_a/chain_1>.
+Unit <Clock_one> processed.
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 147
+ Flip-Flops                                            : 147
+# Shift Registers                                      : 4
+ 2-bit shift register                                  : 4
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : Clock_one.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 394
+#      GND                         : 1
+#      INV                         : 12
+#      LUT1                        : 57
+#      LUT2                        : 74
+#      LUT3                        : 20
+#      LUT4                        : 37
+#      LUT5                        : 11
+#      LUT6                        : 59
+#      MUXCY                       : 62
+#      MUXF7                       : 2
+#      VCC                         : 1
+#      XORCY                       : 58
+# FlipFlops/Latches                : 151
+#      FD                          : 108
+#      FDE                         : 17
+#      FDRE                        : 26
+# Shift Registers                  : 4
+#      SRLC16E                     : 4
+# Clock Buffers                    : 2
+#      BUFG                        : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 20
+#      IBUF                        : 4
+#      OBUF                        : 16
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx9tqg144-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             151  out of  11440     1%  
+ Number of Slice LUTs:                  274  out of   5720     4%  
+    Number used as Logic:               270  out of   5720     4%  
+    Number used as Memory:                4  out of   1440     0%  
+       Number used as SRL:                4
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    302
+   Number with an unused Flip Flop:     151  out of    302    50%  
+   Number with an unused LUT:            28  out of    302     9%  
+   Number of fully used LUT-FF pairs:   123  out of    302    40%  
+   Number of unique control sets:        15
+
+IO Utilization: 
+ Number of IOs:                          21
+ Number of bonded IOBs:                  21  out of    102    20%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                2  out of     16    12%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 98    |
+ubnc_a/deb                         | NONE(Reg_HourTT_1)     | 6     |
+ubnc_b/deb                         | NONE(Reg_mTT_0)        | 7     |
+sec1KHZ                            | BUFG                   | 44    |
+-----------------------------------+------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 4.694ns (Maximum Frequency: 213.047MHz)
+   Minimum input arrival time before clock: 1.801ns
+   Maximum output required time after clock: 7.638ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 4.694ns (frequency: 213.047MHz)
+  Total number of paths / destination ports: 3059 / 141
+-------------------------------------------------------------------------
+Delay:               4.694ns (Levels of Logic = 3)
+  Source:            Reg_secundes_3 (FF)
+  Destination:       Reg_HourJun_0 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: Reg_secundes_3 to Reg_HourJun_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             4   0.447   1.028  Reg_secundes_3 (Reg_secundes_3)
+     LUT5:I0->O           10   0.203   0.857  _n0292121 (_n029212)
+     LUT4:I3->O            4   0.205   0.684  _n029211 (_n02921)
+     LUT6:I5->O            6   0.205   0.744  _n0365_inv1 (_n0365_inv)
+     FDE:CE                    0.322          Reg_HourJun_0
+    ----------------------------------------
+    Total                      4.694ns (1.382ns logic, 3.312ns route)
+                                       (29.4% logic, 70.6% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'ubnc_a/deb'
+  Clock period: 3.711ns (frequency: 269.480MHz)
+  Total number of paths / destination ports: 75 / 14
+-------------------------------------------------------------------------
+Delay:               3.711ns (Levels of Logic = 2)
+  Source:            Reg_HourTT_0 (FF)
+  Destination:       Reg_HourTT_1 (FF)
+  Source Clock:      ubnc_a/deb falling
+  Destination Clock: ubnc_a/deb falling
+
+  Data Path: Reg_HourTT_0 to Reg_HourTT_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             9   0.447   1.058  Reg_HourTT_0 (Reg_HourTT_0)
+     LUT6:I3->O            4   0.205   0.684  _n0516_inv1 (_n0516_inv)
+     LUT6:I5->O            4   0.205   0.683  Mcount_Reg_HourTT_val (Mcount_Reg_HourTT_val)
+     FDRE:R                    0.430          Reg_HourTT_0
+    ----------------------------------------
+    Total                      3.711ns (1.287ns logic, 2.424ns route)
+                                       (34.7% logic, 65.3% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'ubnc_b/deb'
+  Clock period: 3.684ns (frequency: 271.470MHz)
+  Total number of paths / destination ports: 61 / 15
+-------------------------------------------------------------------------
+Delay:               3.684ns (Levels of Logic = 2)
+  Source:            Reg_minTT_0 (FF)
+  Destination:       Reg_mTT_0 (FF)
+  Source Clock:      ubnc_b/deb falling
+  Destination Clock: ubnc_b/deb falling
+
+  Data Path: Reg_minTT_0 to Reg_mTT_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               7   0.447   1.002  Reg_minTT_0 (Reg_minTT_0)
+     LUT6:I3->O            6   0.205   0.745  _n032731 (_n03273)
+     LUT4:I3->O            3   0.205   0.650  _n03271 (_n0327)
+     FDRE:R                    0.430          Reg_mTT_0
+    ----------------------------------------
+    Total                      3.684ns (1.287ns logic, 2.397ns route)
+                                       (34.9% logic, 65.1% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'sec1KHZ'
+  Clock period: 3.431ns (frequency: 291.464MHz)
+  Total number of paths / destination ports: 112 / 40
+-------------------------------------------------------------------------
+Delay:               3.431ns (Levels of Logic = 3)
+  Source:            ubnc_c/chain_6 (FF)
+  Destination:       ubnc_c/deb (FF)
+  Source Clock:      sec1KHZ rising
+  Destination Clock: sec1KHZ rising
+
+  Data Path: ubnc_c/chain_6 to ubnc_c/deb
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               3   0.447   0.879  ubnc_c/chain_6 (ubnc_c/chain_6)
+     LUT4:I1->O            1   0.205   0.580  ubnc_c/_n0013_SW0 (N18)
+     LUT6:I5->O            1   0.205   0.808  ubnc_c/_n0013 (ubnc_c/_n0013)
+     LUT3:I0->O            1   0.205   0.000  ubnc_c/deb_rstpot (ubnc_c/deb_rstpot)
+     FD:D                      0.102          ubnc_c/deb
+    ----------------------------------------
+    Total                      3.431ns (1.164ns logic, 2.267ns route)
+                                       (33.9% logic, 66.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'sec1KHZ'
+  Total number of paths / destination ports: 4 / 4
+-------------------------------------------------------------------------
+Offset:              1.801ns (Levels of Logic = 1)
+  Source:            swch<1> (PAD)
+  Destination:       ubnc_d/Mshreg_chain_1 (FF)
+  Destination Clock: sec1KHZ rising
+
+  Data Path: swch<1> to ubnc_d/Mshreg_chain_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   1.222   0.579  swch_1_IBUF (swch_1_IBUF)
+     SRLC16E:D                -0.060          ubnc_d/Mshreg_chain_1
+    ----------------------------------------
+    Total                      1.801ns (1.222ns logic, 0.579ns route)
+                                       (67.9% logic, 32.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 382 / 14
+-------------------------------------------------------------------------
+Offset:              7.167ns (Levels of Logic = 5)
+  Source:            Reg_dynamics_1 (FF)
+  Destination:       OUTCR<8> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: Reg_dynamics_1 to OUTCR<8>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q             11   0.447   1.227  Reg_dynamics_1 (Reg_dynamics_1)
+     LUT6:I1->O            1   0.203   0.580  Reg_dynamics<1>51 (Reg_dynamics<1>5)
+     LUT6:I5->O            1   0.205   0.000  Reg_dynamics<1>54_F (N50)
+     MUXF7:I0->O           7   0.131   1.021  Reg_dynamics<1>54 (Connect_MUX<3>)
+     LUT4:I0->O            1   0.203   0.579  serout/Mram_DNMSEG41 (OUTCR_8_OBUF)
+     OBUF:I->O                 2.571          OUTCR_8_OBUF (OUTCR<8>)
+    ----------------------------------------
+    Total                      7.167ns (3.760ns logic, 3.407ns route)
+                                       (52.5% logic, 47.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'sec1KHZ'
+  Total number of paths / destination ports: 196 / 7
+-------------------------------------------------------------------------
+Offset:              7.638ns (Levels of Logic = 4)
+  Source:            ubnc_d/deb (FF)
+  Destination:       OUTCR<10> (PAD)
+  Source Clock:      sec1KHZ rising
+
+  Data Path: ubnc_d/deb to OUTCR<10>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q              27   0.447   1.585  ubnc_d/deb (ubnc_d/deb)
+     LUT6:I0->O            1   0.203   0.827  stofmult/Mmux_outData_7 (stofmult/Mmux_outData_7)
+     LUT6:I2->O            7   0.203   1.021  Reg_dynamics<1>3 (Connect_MUX<0>)
+     LUT4:I0->O            1   0.203   0.579  serout/Mram_DNMSEG111 (OUTCR_5_OBUF)
+     OBUF:I->O                 2.571          OUTCR_5_OBUF (OUTCR<5>)
+    ----------------------------------------
+    Total                      7.638ns (3.627ns logic, 4.011ns route)
+                                       (47.5% logic, 52.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'ubnc_b/deb'
+  Total number of paths / destination ports: 49 / 7
+-------------------------------------------------------------------------
+Offset:              6.800ns (Levels of Logic = 4)
+  Source:            Reg_mTT_0 (FF)
+  Destination:       OUTCR<6> (PAD)
+  Source Clock:      ubnc_b/deb falling
+
+  Data Path: Reg_mTT_0 to OUTCR<6>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             6   0.447   0.745  Reg_mTT_0 (Reg_mTT_0)
+     LUT6:I5->O            1   0.205   0.827  stofmult/Mmux_outData_7 (stofmult/Mmux_outData_7)
+     LUT6:I2->O            7   0.203   1.021  Reg_dynamics<1>3 (Connect_MUX<0>)
+     LUT4:I0->O            1   0.203   0.579  serout/Mram_DNMSEG111 (OUTCR_5_OBUF)
+     OBUF:I->O                 2.571          OUTCR_5_OBUF (OUTCR<5>)
+    ----------------------------------------
+    Total                      6.800ns (3.629ns logic, 3.171ns route)
+                                       (53.4% logic, 46.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'ubnc_a/deb'
+  Total number of paths / destination ports: 42 / 7
+-------------------------------------------------------------------------
+Offset:              6.753ns (Levels of Logic = 4)
+  Source:            Reg_TT_1 (FF)
+  Destination:       OUTCR<10> (PAD)
+  Source Clock:      ubnc_a/deb falling
+
+  Data Path: Reg_TT_1 to OUTCR<10>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             5   0.447   0.715  Reg_TT_1 (Reg_TT_1)
+     LUT6:I5->O            1   0.205   0.808  Reg_dynamics<1>_8 (Reg_dynamics<1>_8)
+     LUT6:I3->O            7   0.205   1.021  Reg_dynamics<1>11 (Connect_MUX<1>)
+     LUT4:I0->O            1   0.203   0.579  serout/Mram_DNMSEG51 (OUTCR_9_OBUF)
+     OBUF:I->O                 2.571          OUTCR_9_OBUF (OUTCR<9>)
+    ----------------------------------------
+    Total                      6.753ns (3.631ns logic, 3.122ns route)
+                                       (53.8% logic, 46.2% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    4.694|         |         |         |
+sec1KHZ        |    4.343|         |         |         |
+ubnc_a/deb     |         |    2.290|         |         |
+ubnc_b/deb     |         |    2.376|         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock sec1KHZ
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+sec1KHZ        |    3.431|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock ubnc_a/deb
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+sec1KHZ        |         |         |    4.216|         |
+ubnc_a/deb     |         |         |    3.711|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock ubnc_b/deb
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+sec1KHZ        |         |         |    4.245|         |
+ubnc_b/deb     |         |         |    3.684|         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 9.00 secs
+Total CPU time to Xst completion: 9.01 secs
+ 
+--> 
+
+Total memory usage is 201972 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    3 (   0 filtered)
+

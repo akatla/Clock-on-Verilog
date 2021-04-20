@@ -1,0 +1,8 @@
+verilog isim_temp "UnBounceBB.v"
+verilog isim_temp "MUXSecPlexer.v"
+verilog isim_temp "MUXplexer.v"
+verilog isim_temp "Bublik_two.v"
+verilog isim_temp "BublikSegment.v"
+verilog isim_temp "Clock_one.v"
+verilog isim_temp "testBenchClock.v"
+verilog isim_temp "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"

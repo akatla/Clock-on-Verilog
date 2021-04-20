@@ -1,0 +1,1 @@
+vhdtdtfi -lang verilog -prj Clock_verOne -o C:/SUGONAYEV_Infa/V/Clock_verOne/UnBounceBB.tfi -lib work C:/SUGONAYEV_Infa/V/Clock_verOne//UnBounceBB.v -module UnBounceBB -template C:/Xilinx/14.7/ISE_DS/ISE//data/tfi.tft -deleteonerror 

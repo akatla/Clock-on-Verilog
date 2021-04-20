@@ -1,0 +1,11 @@
+[Inputs]
+clk
+BUT1
+BUT2
+=swch[1:0]=
+[Outputs]
+=OUTCR[15:0]=
+[BiDir]
+[ATTRIBUTES]
+VeriModel Clock_one
+

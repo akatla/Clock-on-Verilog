@@ -1,0 +1,20 @@
+{
+ "Files" : [
+  {
+   "Path" : "D:/0_FPGA_2018/0_GW/ClockWG/src/Clock_one.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "D:/0_FPGA_2018/0_GW/ClockWG/src/UnBounceBB.v",
+   "Type" : "verilog"
+  }
+ ],
+ "IncludePath" : [
+
+ ],
+ "LoopLimit" : 2000,
+ "ResultFile" : "D:/0_FPGA_2018/0_GW/ClockWG/impl/temp/rtl_parser.result",
+ "Top" : "",
+ "VerilogStd" : "verilog_2001",
+ "VhdlStd" : "vhdl_93"
+}

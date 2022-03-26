@@ -1,0 +1,64 @@
+[
+ {
+  "InstFile" : "D:/0_FPGA_2018/0_GW/ClockWG/src/Clock_one.v",
+  "InstLine" : 22,
+  "InstName" : "TOP",
+  "Mode" : 1,
+  "ModuleFile" : "D:/0_FPGA_2018/0_GW/ClockWG/src/Clock_one.v",
+  "ModuleLine" : 22,
+  "ModuleName" : "TOP",
+  "Process" : 0,
+  "SetMode" : false,
+  "SetProcess" : false,
+  "SubNodes" : [
+   {
+    "InstFile" : "D:/0_FPGA_2018/0_GW/ClockWG/src/Clock_one.v",
+    "InstLine" : 159,
+    "InstName" : "ubnc_c",
+    "Mode" : 1,
+    "ModuleFile" : "D:/0_FPGA_2018/0_GW/ClockWG/src/UnBounceBB.v",
+    "ModuleLine" : 22,
+    "ModuleName" : "UnBounceBB",
+    "Process" : 0,
+    "SetMode" : false,
+    "SetProcess" : false
+   },
+   {
+    "InstFile" : "D:/0_FPGA_2018/0_GW/ClockWG/src/Clock_one.v",
+    "InstLine" : 162,
+    "InstName" : "ubnc_d",
+    "Mode" : 1,
+    "ModuleFile" : "D:/0_FPGA_2018/0_GW/ClockWG/src/UnBounceBB.v",
+    "ModuleLine" : 22,
+    "ModuleName" : "UnBounceBB",
+    "Process" : 0,
+    "SetMode" : false,
+    "SetProcess" : false
+   },
+   {
+    "InstFile" : "D:/0_FPGA_2018/0_GW/ClockWG/src/Clock_one.v",
+    "InstLine" : 165,
+    "InstName" : "ubnc_a",
+    "Mode" : 1,
+    "ModuleFile" : "D:/0_FPGA_2018/0_GW/ClockWG/src/UnBounceBB.v",
+    "ModuleLine" : 22,
+    "ModuleName" : "UnBounceBB",
+    "Process" : 0,
+    "SetMode" : false,
+    "SetProcess" : false
+   },
+   {
+    "InstFile" : "D:/0_FPGA_2018/0_GW/ClockWG/src/Clock_one.v",
+    "InstLine" : 168,
+    "InstName" : "ubnc_b",
+    "Mode" : 1,
+    "ModuleFile" : "D:/0_FPGA_2018/0_GW/ClockWG/src/UnBounceBB.v",
+    "ModuleLine" : 22,
+    "ModuleName" : "UnBounceBB",
+    "Process" : 0,
+    "SetMode" : false,
+    "SetProcess" : false
+   }
+  ]
+ }
+]

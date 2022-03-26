@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Module name="TOP" Register="78" Alu="37" Lut="150">
+    <SubModule name="ubnc_c" Register="11" Lut="6"/>
+    <SubModule name="ubnc_d" Register="11" Lut="6"/>
+    <SubModule name="ubnc_a" Register="11" Lut="6"/>
+    <SubModule name="ubnc_b" Register="11" Lut="6"/>
+</Module>
